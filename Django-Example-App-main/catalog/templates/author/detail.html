@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %} {% block content %}
+
+<h1>Author: {{object.name}}</h1>
+
+<p><strong>Birth:</strong> {{ object.date_of_birth }}</p>
+<p><strong>Death:</strong> {{ object.date_of_death}}</p>
+
+<div style="margin-top: 60px">
+    <h2>Books:</h2>
+    <ul> {{ list_of_books}} </ul>
+
+
+
+</div>
+
+{% endblock %}
