@@ -49,5 +49,4 @@ class AuthorListView(generic.ListView):
 
 class AuthorDetailView(generic.DetailView):
     model = Author
-    list_of_books = Book.objects.filter(author=Author.name)
     template_name = "author/detail.html"

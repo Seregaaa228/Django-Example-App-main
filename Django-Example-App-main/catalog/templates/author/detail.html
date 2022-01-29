@@ -6,8 +6,11 @@
 <p><strong>Death:</strong> {{ object.date_of_death}}</p>
 
 <div style="margin-top: 60px">
-    <h2>Books:</h2>
-    <ul> {{ list_of_books}} </ul>
+    <p><strong>Books:</strong>:</p>
+   {% for book in author.book_set.all %}
+  <li><a href="{{ book.get_absolute_url }}">{{book}}</a></li>
+  <p>{{book.summary}}</p>
+    {% endfor %}
 
 
 
