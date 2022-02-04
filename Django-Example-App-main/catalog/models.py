@@ -1,7 +1,5 @@
 from django.db import models
 import uuid
-from django.shortcuts import render
-from django.views import generic
 
 # Create your models here.
 
@@ -27,8 +25,7 @@ class Author(models.Model):
         return self.name
 
     def get_absolute_url(self) -> str:
-        return f"/catalog/authors/{self.pk}"
-
+        return f"/catalog/author/{self.pk}"
 
 
 class Genre(models.Model):
